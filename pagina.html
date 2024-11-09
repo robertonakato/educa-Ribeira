@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout do Aplicativo</title>
+    <style>
+        /* Reset Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .sidebar{
+    width: auto;
+    max-width: 300px;
+    height: 100%;
+    padding-left: 10px ;
+    padding-right: 10px ;
+
+}
+
+details{
+    width: 100%;
+    max-height: 600px;
+    padding-bottom: 15px;
+    font-weight: 300;
+    gap: 10px;
+
+}
+details button{
+    width: 100%;
+    padding: 5px;
+    background: var(--cinza2);
+    color: var(--color-dark);
+    cursor: pointer;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #7ac0eb;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Cabeçalho */
+        .cabecalho {
+            background-color: #2b04aa;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Barra Lateral */
+        .barra-lateral {
+            width: 250px;
+            background-color: #8bc7e7;
+            padding: 20px;
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        /* Conteúdo Principal */
+        .conteudo-principal {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: white;
+        }
+
+        /* Diagrama de Modelo de Domínio */
+        .modelo-dominio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        /* Propriedades e Caixa de Ferramentas */
+        .propriedades-ferramentas {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .propriedades, .ferramentas {
+            flex: 1;
+            padding: 10px;
+            background-color: #e0e0e0;
+            height: 200px;
+        }
+        .ferramentas{
+            justify-items: center;
+        }
+        /* Rodapé */
+        .rodape {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        input{
+            height: 30px ;
+            width: 200px;
+            border-radius: 10%;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="cabecalho">
+        <h1>Nome do Aluno</h1>
+        <p>Turma: 123 abc</p>
+    </div>
+
+    <!-- Layout Principal -->
+    <div style="display: flex; height: calc(100vh - 60px);">
+        <!-- Barra Lateral -->
+        <aside class="barra-lateral">
+            <sidebar class="sidebar">
+                <details open class="sugestoes">
+                    <summary> Menu</summary>
+                    <button type="button">Eventos</button>
+                    <button type="button"> Materias</button>
+                    <button type="button"> Fale com tultor</button>
+                    <button type="button">Material Online</button>
+                    <button type="button">Contato</button>
+                </details>
+            </sidebar>
+
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <div class="conteudo-principal">
+            <!-- Propriedades e Caixa de Ferramentas -->
+            <div class="propriedades-ferramentas">
+                <div class="propriedades">
+                    <h4>Matérias disponiveis</h4>
+                    <sidebar class="sidebar">
+                        <details open class="portugues">
+                            <summary> portugues</summary>
+                            <button type="button">material</button>
+                        </details>
+                            <details open class="matématica">
+                            <summary> matemática</summary>
+                            <button type="button">material</button>
+                        </details>
+
+                        </sidebar>
+
+                </div>
+
+                <div class="ferramentas">
+                    <img src="./imagens/OIG2 (3).jpeg" />
+                    <h4>Pergunte Ao ribeiro</h4>
+                    <Input placeholder="Faça Aqui sua Pergunte" type="text"></Input>
+                </div>
+            </div>
+
+            <!-- Diagrama de Modelo de Domínio -->
+            <div class="modelo-dominio">
+                <p>Mural de informações</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="rodape">
+        <p>Bem vindo ao Nosso App</p>
+    </div>
+
+</body>
+</html>

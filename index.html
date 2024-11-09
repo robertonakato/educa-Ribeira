@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Conexão Ribeira</title>
+    <style>
+        /* Reset Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa; /* Azul claro para o fundo */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container Principal do Login */
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #ffffff; /* Branco para destacar o login */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: 2px solid #0077b6; /* Azul médio para o contorno */
+        }
+
+        /* Logo */
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Título de Boas-Vindas */
+        .welcome-text {
+            font-size: 1.5em;
+            color: #0077b6; /* Azul médio para o título */
+            margin-bottom: 10px;
+        }
+
+        /* Formulário de Login */
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Campos de Entrada */
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #90e0ef; /* Azul claro para a borda dos campos */
+            border-radius: 5px;
+            background-color: #caf0f8; /* Fundo azul claro */
+            color: #023e8a; /* Azul escuro para o texto */
+        }
+
+        /* Botão de Login */
+        .login-form button {
+            padding: 10px;
+            font-size: 1em;
+            color: white;
+            background-color: #0077b6; /* Azul médio para o botão */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Efeito de Hover no Botão */
+        .login-form button:hover {
+            background-color: #023e8a; /* Azul mais escuro ao passar o mouse */
+        }
+
+        /* Texto do Rodapé */
+        .footer-text {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container Principal do Login -->
+    <div class="login-container">
+        <!-- Logo -->
+        <img src="/imagens/ca38195e-2ad7-45ae-848c-aac04f29104e.jpeg" alt="Logo da Conexão Ribeira" class="logo">
+
+        <!-- Texto de Boas-Vindas -->
+        <div class="welcome-text">Bem-vindo ao Conexão Ribeira</div>
+
+        <!-- Formulário de Login -->
+        <form class="login-form">
+            <input type="text" placeholder="Usuário" required>
+            <input type="password" placeholder="Senha" required>
+            <a href="./pagina.html"> <button type="button">Login</button></a>
+        </form>
+
+        <!-- Texto de Rodapé -->
+        <div class="footer-text">Por favor, insira suas credenciais para continuar.</div>
+    </div>
+
+</body>
+</html>
